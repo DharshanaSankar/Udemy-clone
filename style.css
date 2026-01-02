@@ -19,7 +19,7 @@
 .section__s1 {
   margin: 2px;
   padding: 10px;
-  color: blueviolet;
+  color:#a435f0;
 }
 .section__s2 {
   border: 1px solid black;
@@ -59,9 +59,10 @@
   top: 150%;
   right: 0;
   display: none;
-  background-color:white
-
+  background-color:white;
+  
 }
+
 .mylearning:hover .mylearning__popup{
   display: block;
 }
@@ -80,11 +81,18 @@
   padding: 5px;
 }
 .categories p {
-  border: 1px solid black;
+  border: 1px solid #a435f0;
   border-radius: 10px;
-  background-color: blueviolet;
+  background-color: #a435f0;
   color: beige;
   padding: 10px;
+}
+.categories p:hover{
+  transition-duration: 1s;
+  background-color: transparent;
+  cursor: pointer;
+  border: solid 1px #a435f0;
+  color: black;
 }
 .salepic{
   position: relative;
@@ -101,7 +109,22 @@
   left: 10%;
   color: white;
   background-color: transparent;
+  animation-name: zoom;
+  animation-duration: 2s;
+  /* opacity: 0;
+  animation-fill-mode: forwards; */
 
+}
+@keyframes zoom {
+  0%{
+      transform: scale(0);
+      opacity: 0;
+  }
+  100%{
+        transform: scale(1);
+        opacity: 1;
+  }
+  
 }
 .Recommended {
   padding: 10px;
