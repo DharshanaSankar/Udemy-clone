@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   font-family: "Gabarito", sans-serif;
+  /* font-size: 16px; */
+}
+body {
+  font-size: 16px;
 }
 .navbar {
   display: flex;
@@ -19,7 +23,7 @@
 .section__s1 {
   margin: 2px;
   padding: 10px;
-  color:#a435f0;
+  color: #a435f0;
 }
 .section__s2 {
   border: 1px solid black;
@@ -49,21 +53,20 @@
   align-items: center;
   font-size: 16px;
 }
-.mylearning{
+.mylearning {
   position: relative;
 }
-.mylearning__popup{
+.mylearning__popup {
   position: absolute;
   border: solid 2px black;
   padding: 20%;
   top: 150%;
   right: 0;
   display: none;
-  background-color:white;
-  
+  background-color: white;
 }
 
-.mylearning:hover .mylearning__popup{
+.mylearning:hover .mylearning__popup {
   display: block;
 }
 .section__s3 i {
@@ -72,6 +75,9 @@
 
 .section__s3 p {
   cursor: pointer;
+}
+.section__s4{
+  display: none;
 }
 .categories {
   display: flex;
@@ -87,21 +93,21 @@
   color: beige;
   padding: 10px;
 }
-.categories p:hover{
+.categories p:hover {
   transition-duration: 1s;
   background-color: transparent;
   cursor: pointer;
   border: solid 1px #a435f0;
   color: black;
 }
-.salepic{
+.salepic {
   position: relative;
 }
 .salepic img {
   width: 100%;
   /* display: flex; */
 }
-.sales__offer{
+.sales__offer {
   border: solid 2px wheat;
   padding: 5px;
   position: absolute;
@@ -111,208 +117,111 @@
   background-color: transparent;
   animation-name: zoom;
   animation-duration: 2s;
+  
   /* opacity: 0;
   animation-fill-mode: forwards; */
-
+}
+.sales__offer h1{
+  /* font-size: clamp(16px, 3.5vw, 32px); */
+  max-width: 600px;   /* controls when it breaks into next line */
+  line-height: 1.3;
+}
+.sales__offer p{
+   /* font-size: clamp(12px, 2vw, 18px); */
+   max-width: 600px;   /* controls when it breaks into next line */
+  line-height: 1.3;
 }
 @keyframes zoom {
-  0%{
-      transform: scale(0);
-      opacity: 0;
+  0% {
+    transform: scale(0);
+    opacity: 0;
   }
-  100%{
-        transform: scale(1);
-        opacity: 1;
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.Recommended {
+  padding: 10px;
+}
+.recommendation-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.coursecard {
+  flex-grow: 1;
+  flex-basis: 20%;
+  margin: 5px;
+}
+.coursecard img {
+  width: 100%;
+  height: 50%;
+}
+.Topicsrecommended {
+  padding: 10px;
+}
+.Topiccont {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.Topiccont p {
+  padding: 5px;
+  border: solid gray 2px;
+  flex-grow: 1;
+  flex-basis: 25%;
+}
+.Popular {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+.popularcont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+.footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+.footer__one {
+  display: flex;
+  gap: 10px;
+}
+.footer__one p {
+  margin: 20px;
+}
+.footer_two {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  align-items: center;
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Gabarito", sans-serif;
+  }
+}
+/* Media Queries */
+@media screen and (max-width:800px) {
+  body{
+    font-size: 10px;
   }
   
 }
-.Recommended {
-  padding: 10px;
-}
-.recommendation-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-.coursecard {
-  width: 250px;
-}
-.coursecard img {
-  width: 100%;
-  height: 50%;
-}
-.Topicsrecommended {
-  padding: 10px;
-}
-.Topiccont {
-  display: flex;
-  margin-top: 10px;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.Topiccont p {
-  padding: 5px;
-  border: solid gray 2px;
-  flex-grow: 1;
-  flex-basis: 25%;
-}
-.Popular{
-    padding: 10px;
-    border-bottom: 1px solid black;
-}
-.popularcont{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 5px;
-}
-.footer{
-    background-color: black;
-    color: white;
-    padding: 10px;
-}
-.footer__one{
-    display: flex;
-    gap: 10px;
-}
-.footer__one p{
-    margin: 20px;
-}
-.footer_two{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    align-items: center;
-=======
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Gabarito", sans-serif;
-}
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 2px;
-  border-bottom: solid black 1px;
-}
-.section__s1 {
-  margin: 2px;
-  padding: 10px;
-  color: blueviolet;
-}
-.section__s2 {
-  border: 1px solid black;
-  border-radius: 30px;
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px;
-  gap: 10px;
-}
-.section__s2 input {
-  border: none;
-  width: 100%;
-  font-size: 16px;
-  color: gray;
-  line-height: 1;
-}
-.section__s2 input:focus {
-  outline: none;
-}
-.section__s3 {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  font-size: 16px;
-}
-.section__s3 i {
-  cursor: pointer;
-}
-
-.section__s3 p {
-  cursor: pointer;
-}
-.categories {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border-bottom: solid black 1px;
-  padding: 5px;
-}
-.categories p {
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: blueviolet;
-  color: beige;
-  padding: 10px;
-}
-.salepic img {
-  width: 100%;
-  /* display: flex; */
-}
-.Recommended {
-  padding: 10px;
-}
-.recommendation-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-.coursecard {
-  width: 250px;
-}
-.coursecard img {
-  width: 100%;
-  height: 50%;
-}
-.Topicsrecommended {
-  padding: 10px;
-}
-.Topiccont {
-  display: flex;
-  margin-top: 10px;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.Topiccont p {
-  padding: 5px;
-  border: solid gray 2px;
-  flex-grow: 1;
-  flex-basis: 25%;
-}
-.Popular{
-    padding: 10px;
-    border-bottom: 1px solid black;
-}
-.popularcont{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 5px;
-}
-.footer{
-    background-color: black;
-    color: white;
-    padding: 10px;
-}
-.footer__one{
-    display: flex;
-    gap: 10px;
-}
-.footer__one p{
-    margin: 20px;
-}
-.footer__two{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    align-items: center;
-
+@media screen and (max-width:600px) {
+  .coursecard{
+    flex-basis: 40%;
+  }
+  .categories,.section__s2,.section__s3{
+    display: none;
+  }
+  .section__s4{
+    display: block;
+  }
 }
